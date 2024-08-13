@@ -1,10 +1,18 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Landing from './pages/Landing'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-red-500 text-5xl'>Hello world</h1>
+    <Routes>
+        <Route path='/' element={<Landing/>}  />
+        <Route path='/home' element={<Home/>}  />
+
+        <Route path={'/*'} element={<Home/>} />
+      </Routes>
     </>
   )
 }
